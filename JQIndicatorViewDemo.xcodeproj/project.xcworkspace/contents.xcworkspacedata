@@ -2,12 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:../JQIndicatorViewDemo/JQCollectionView.h">
-   </FileRef>
-   <FileRef
-      location = "group:../JQIndicatorViewDemo/JQCollectionView.m">
-   </FileRef>
-   <FileRef
       location = "self:JQIndicatorViewDemo.xcodeproj">
    </FileRef>
 </Workspace>

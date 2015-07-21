@@ -42,7 +42,7 @@ static NSString * const reuseIdentifier = @"Cell";
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 2;
+    return 4;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -50,18 +50,19 @@ static NSString * const reuseIdentifier = @"Cell";
     
     //用Integer代替枚举
     
-    UIView *view = [cell.contentView viewWithTag:101+indexPath.row];
-    if (view != nil) {
+    for (UIView *view in cell.contentView.subviews) {
         [view removeFromSuperview];
-        view = nil;
     }
     
-    JQIndicatorView *indicator = [[JQIndicatorView alloc] initWithType:indexPath.row TintColor:[self randomColor]];
-    indicator.tag = 101 + indexPath.row;
+        JQIndicatorView *indicator = [[JQIndicatorView alloc] initWithType:indexPath.row tintColor:[self randomColor]];
+        indicator.tag = 101 + indexPath.row;
+        
+        indicator.center = cell.contentView.center;
+        [cell.contentView addSubview:indicator];
+        [indicator startAnimating];
     
-    indicator.center = cell.contentView.center;
-    [cell.contentView addSubview:indicator];
-    [indicator startAnimating];
+    
+    
     // Configure the cell
     
     return cell;

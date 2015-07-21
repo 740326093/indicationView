@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A033D2A1B5DCD4700BD5C6A /* JQCyclingSpotAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A033D291B5DCD4700BD5C6A /* JQCyclingSpotAnimation.m */; };
+		1A033D2D1B5DCE5700BD5C6A /* JQIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A033D2C1B5DCE5700BD5C6A /* JQIndicatorView.m */; };
+		1A9228231B5DD865003D7A55 /* JQCyclingLineAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9228221B5DD865003D7A55 /* JQCyclingLineAnimation.m */; };
+		1A9228261B5DDB7C003D7A55 /* JQCyclingCycleAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9228251B5DDB7C003D7A55 /* JQCyclingCycleAnimation.m */; };
 		1AEB19591B5A366F00A68BD3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEB19581B5A366F00A68BD3 /* main.m */; };
 		1AEB195C1B5A366F00A68BD3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEB195B1B5A366F00A68BD3 /* AppDelegate.m */; };
 		1AEB19621B5A366F00A68BD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AEB19601B5A366F00A68BD3 /* Main.storyboard */; };
@@ -14,7 +18,7 @@
 		1AEB19671B5A366F00A68BD3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AEB19651B5A366F00A68BD3 /* LaunchScreen.xib */; };
 		1AEB19731B5A366F00A68BD3 /* JQIndicatorViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEB19721B5A366F00A68BD3 /* JQIndicatorViewDemoTests.m */; };
 		1AEB19811B5A371300A68BD3 /* JQCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEB19801B5A371300A68BD3 /* JQCollectionView.m */; };
-		1AEB19881B5A37C500A68BD3 /* JQIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEB19871B5A37C500A68BD3 /* JQIndicatorView.m */; };
+		1AEB19881B5A37C500A68BD3 /* JQMusicAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEB19871B5A37C500A68BD3 /* JQMusicAnimation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +32,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A033D281B5DCD4700BD5C6A /* JQCyclingSpotAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JQCyclingSpotAnimation.h; path = JQIndicatorView/JQCyclingSpotAnimation.h; sourceTree = "<group>"; };
+		1A033D291B5DCD4700BD5C6A /* JQCyclingSpotAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JQCyclingSpotAnimation.m; path = JQIndicatorView/JQCyclingSpotAnimation.m; sourceTree = "<group>"; };
+		1A033D2B1B5DCE5700BD5C6A /* JQIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JQIndicatorView.h; path = JQIndicatorView/JQIndicatorView.h; sourceTree = "<group>"; };
+		1A033D2C1B5DCE5700BD5C6A /* JQIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JQIndicatorView.m; path = JQIndicatorView/JQIndicatorView.m; sourceTree = "<group>"; };
+		1A9228201B5DD557003D7A55 /* JQIndicatorAnimationProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JQIndicatorAnimationProtocol.h; path = JQIndicatorView/JQIndicatorAnimationProtocol.h; sourceTree = "<group>"; };
+		1A9228211B5DD865003D7A55 /* JQCyclingLineAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JQCyclingLineAnimation.h; path = JQIndicatorView/JQCyclingLineAnimation.h; sourceTree = "<group>"; };
+		1A9228221B5DD865003D7A55 /* JQCyclingLineAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JQCyclingLineAnimation.m; path = JQIndicatorView/JQCyclingLineAnimation.m; sourceTree = "<group>"; };
+		1A9228241B5DDB7C003D7A55 /* JQCyclingCycleAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JQCyclingCycleAnimation.h; path = JQIndicatorView/JQCyclingCycleAnimation.h; sourceTree = "<group>"; };
+		1A9228251B5DDB7C003D7A55 /* JQCyclingCycleAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JQCyclingCycleAnimation.m; path = JQIndicatorView/JQCyclingCycleAnimation.m; sourceTree = "<group>"; };
 		1AEB19531B5A366F00A68BD3 /* JQIndicatorViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JQIndicatorViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AEB19571B5A366F00A68BD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1AEB19581B5A366F00A68BD3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -41,8 +54,8 @@
 		1AEB19721B5A366F00A68BD3 /* JQIndicatorViewDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQIndicatorViewDemoTests.m; sourceTree = "<group>"; };
 		1AEB197F1B5A371300A68BD3 /* JQCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JQCollectionView.h; sourceTree = "<group>"; };
 		1AEB19801B5A371300A68BD3 /* JQCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JQCollectionView.m; sourceTree = "<group>"; };
-		1AEB19861B5A37C500A68BD3 /* JQIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JQIndicatorView.h; path = JQIndicatorView/JQIndicatorView.h; sourceTree = "<group>"; };
-		1AEB19871B5A37C500A68BD3 /* JQIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JQIndicatorView.m; path = JQIndicatorView/JQIndicatorView.m; sourceTree = "<group>"; };
+		1AEB19861B5A37C500A68BD3 /* JQMusicAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JQMusicAnimation.h; path = JQIndicatorView/JQMusicAnimation.h; sourceTree = "<group>"; };
+		1AEB19871B5A37C500A68BD3 /* JQMusicAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JQMusicAnimation.m; path = JQIndicatorView/JQMusicAnimation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,10 +76,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A033D271B5DCD0500BD5C6A /* JQCyclingIndicatorAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				1A033D281B5DCD4700BD5C6A /* JQCyclingSpotAnimation.h */,
+				1A033D291B5DCD4700BD5C6A /* JQCyclingSpotAnimation.m */,
+				1A9228211B5DD865003D7A55 /* JQCyclingLineAnimation.h */,
+				1A9228221B5DD865003D7A55 /* JQCyclingLineAnimation.m */,
+				1A9228241B5DDB7C003D7A55 /* JQCyclingCycleAnimation.h */,
+				1A9228251B5DDB7C003D7A55 /* JQCyclingCycleAnimation.m */,
+			);
+			name = JQCyclingIndicatorAnimation;
+			sourceTree = "<group>";
+		};
+		1A033D2E1B5DCE5C00BD5C6A /* JQIndicatorView */ = {
+			isa = PBXGroup;
+			children = (
+				1A033D2B1B5DCE5700BD5C6A /* JQIndicatorView.h */,
+				1A033D2C1B5DCE5700BD5C6A /* JQIndicatorView.m */,
+				1A9228201B5DD557003D7A55 /* JQIndicatorAnimationProtocol.h */,
+				1A033D271B5DCD0500BD5C6A /* JQCyclingIndicatorAnimation */,
+				1AEB19821B5A377500A68BD3 /* JQMusicIndicatorAnimation */,
+			);
+			name = JQIndicatorView;
+			sourceTree = "<group>";
+		};
 		1AEB194A1B5A366F00A68BD3 = {
 			isa = PBXGroup;
 			children = (
-				1AEB19821B5A377500A68BD3 /* JQIndicatorView */,
+				1A033D2E1B5DCE5C00BD5C6A /* JQIndicatorView */,
 				1AEB19551B5A366F00A68BD3 /* JQIndicatorViewDemo */,
 				1AEB196F1B5A366F00A68BD3 /* JQIndicatorViewDemoTests */,
 				1AEB19541B5A366F00A68BD3 /* Products */,
@@ -123,13 +161,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		1AEB19821B5A377500A68BD3 /* JQIndicatorView */ = {
+		1AEB19821B5A377500A68BD3 /* JQMusicIndicatorAnimation */ = {
 			isa = PBXGroup;
 			children = (
-				1AEB19861B5A37C500A68BD3 /* JQIndicatorView.h */,
-				1AEB19871B5A37C500A68BD3 /* JQIndicatorView.m */,
+				1AEB19861B5A37C500A68BD3 /* JQMusicAnimation.h */,
+				1AEB19871B5A37C500A68BD3 /* JQMusicAnimation.m */,
 			);
-			name = JQIndicatorView;
+			name = JQMusicIndicatorAnimation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,10 +271,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A9228261B5DDB7C003D7A55 /* JQCyclingCycleAnimation.m in Sources */,
 				1AEB19811B5A371300A68BD3 /* JQCollectionView.m in Sources */,
-				1AEB19881B5A37C500A68BD3 /* JQIndicatorView.m in Sources */,
+				1A033D2A1B5DCD4700BD5C6A /* JQCyclingSpotAnimation.m in Sources */,
+				1AEB19881B5A37C500A68BD3 /* JQMusicAnimation.m in Sources */,
+				1A9228231B5DD865003D7A55 /* JQCyclingLineAnimation.m in Sources */,
 				1AEB195C1B5A366F00A68BD3 /* AppDelegate.m in Sources */,
 				1AEB19591B5A366F00A68BD3 /* main.m in Sources */,
+				1A033D2D1B5DCE5700BD5C6A /* JQIndicatorView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
