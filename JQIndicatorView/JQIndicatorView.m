@@ -54,7 +54,6 @@
             [animation configAnimationAtLayer:self.layer withTintColor:self.loadingTintColor size:self.size];
         }
         self.isAnimating = YES;
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(becomeActive) name:UIApplicationDidBecomeActiveNotification object:nil];
     }
 }
 
@@ -63,7 +62,6 @@
         [self fadeOutWithAnimation:YES];
         [self removeFromSuperview];
         self.isAnimating = NO;
-        [[NSNotificationCenter defaultCenter] removeObserver:self];
     }
 }
 
@@ -112,14 +110,6 @@
     [self setToFadeOutState];
 }
 
-#pragma mark - Application did enter background
-
-- (void)becomeActive{
-    if (self.isAnimating) {
-        [self startAnimating];
-        self.continueAnimating = NO;
-    }
-}
 
 
 @end
