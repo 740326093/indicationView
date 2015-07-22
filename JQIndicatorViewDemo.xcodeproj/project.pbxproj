@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1A033D2A1B5DCD4700BD5C6A /* JQCyclingSpotAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A033D291B5DCD4700BD5C6A /* JQCyclingSpotAnimation.m */; };
 		1A033D2D1B5DCE5700BD5C6A /* JQIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A033D2C1B5DCE5700BD5C6A /* JQIndicatorView.m */; };
+		1A4E6D901B5F3F6C004A39F6 /* JQMusic2Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4E6D8F1B5F3F6C004A39F6 /* JQMusic2Animation.m */; };
 		1A9228231B5DD865003D7A55 /* JQCyclingLineAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9228221B5DD865003D7A55 /* JQCyclingLineAnimation.m */; };
 		1A9228261B5DDB7C003D7A55 /* JQCyclingCycleAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9228251B5DDB7C003D7A55 /* JQCyclingCycleAnimation.m */; };
 		1AEB19591B5A366F00A68BD3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEB19581B5A366F00A68BD3 /* main.m */; };
@@ -18,7 +19,7 @@
 		1AEB19671B5A366F00A68BD3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AEB19651B5A366F00A68BD3 /* LaunchScreen.xib */; };
 		1AEB19731B5A366F00A68BD3 /* JQIndicatorViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEB19721B5A366F00A68BD3 /* JQIndicatorViewDemoTests.m */; };
 		1AEB19811B5A371300A68BD3 /* JQCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEB19801B5A371300A68BD3 /* JQCollectionView.m */; };
-		1AEB19881B5A37C500A68BD3 /* JQMusicAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEB19871B5A37C500A68BD3 /* JQMusicAnimation.m */; };
+		1AEB19881B5A37C500A68BD3 /* JQMusic1Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEB19871B5A37C500A68BD3 /* JQMusic1Animation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,8 @@
 		1A033D291B5DCD4700BD5C6A /* JQCyclingSpotAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JQCyclingSpotAnimation.m; path = JQIndicatorView/JQCyclingSpotAnimation.m; sourceTree = "<group>"; };
 		1A033D2B1B5DCE5700BD5C6A /* JQIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JQIndicatorView.h; path = JQIndicatorView/JQIndicatorView.h; sourceTree = "<group>"; };
 		1A033D2C1B5DCE5700BD5C6A /* JQIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JQIndicatorView.m; path = JQIndicatorView/JQIndicatorView.m; sourceTree = "<group>"; };
+		1A4E6D8E1B5F3F6C004A39F6 /* JQMusic2Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JQMusic2Animation.h; path = JQIndicatorView/JQMusic2Animation.h; sourceTree = "<group>"; };
+		1A4E6D8F1B5F3F6C004A39F6 /* JQMusic2Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JQMusic2Animation.m; path = JQIndicatorView/JQMusic2Animation.m; sourceTree = "<group>"; };
 		1A9228201B5DD557003D7A55 /* JQIndicatorAnimationProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JQIndicatorAnimationProtocol.h; path = JQIndicatorView/JQIndicatorAnimationProtocol.h; sourceTree = "<group>"; };
 		1A9228211B5DD865003D7A55 /* JQCyclingLineAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JQCyclingLineAnimation.h; path = JQIndicatorView/JQCyclingLineAnimation.h; sourceTree = "<group>"; };
 		1A9228221B5DD865003D7A55 /* JQCyclingLineAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JQCyclingLineAnimation.m; path = JQIndicatorView/JQCyclingLineAnimation.m; sourceTree = "<group>"; };
@@ -54,8 +57,8 @@
 		1AEB19721B5A366F00A68BD3 /* JQIndicatorViewDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQIndicatorViewDemoTests.m; sourceTree = "<group>"; };
 		1AEB197F1B5A371300A68BD3 /* JQCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JQCollectionView.h; sourceTree = "<group>"; };
 		1AEB19801B5A371300A68BD3 /* JQCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JQCollectionView.m; sourceTree = "<group>"; };
-		1AEB19861B5A37C500A68BD3 /* JQMusicAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JQMusicAnimation.h; path = JQIndicatorView/JQMusicAnimation.h; sourceTree = "<group>"; };
-		1AEB19871B5A37C500A68BD3 /* JQMusicAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JQMusicAnimation.m; path = JQIndicatorView/JQMusicAnimation.m; sourceTree = "<group>"; };
+		1AEB19861B5A37C500A68BD3 /* JQMusic1Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JQMusic1Animation.h; path = JQIndicatorView/JQMusic1Animation.h; sourceTree = "<group>"; };
+		1AEB19871B5A37C500A68BD3 /* JQMusic1Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JQMusic1Animation.m; path = JQIndicatorView/JQMusic1Animation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,8 +167,10 @@
 		1AEB19821B5A377500A68BD3 /* JQMusicIndicatorAnimation */ = {
 			isa = PBXGroup;
 			children = (
-				1AEB19861B5A37C500A68BD3 /* JQMusicAnimation.h */,
-				1AEB19871B5A37C500A68BD3 /* JQMusicAnimation.m */,
+				1AEB19861B5A37C500A68BD3 /* JQMusic1Animation.h */,
+				1AEB19871B5A37C500A68BD3 /* JQMusic1Animation.m */,
+				1A4E6D8E1B5F3F6C004A39F6 /* JQMusic2Animation.h */,
+				1A4E6D8F1B5F3F6C004A39F6 /* JQMusic2Animation.m */,
 			);
 			name = JQMusicIndicatorAnimation;
 			sourceTree = "<group>";
@@ -274,10 +279,11 @@
 				1A9228261B5DDB7C003D7A55 /* JQCyclingCycleAnimation.m in Sources */,
 				1AEB19811B5A371300A68BD3 /* JQCollectionView.m in Sources */,
 				1A033D2A1B5DCD4700BD5C6A /* JQCyclingSpotAnimation.m in Sources */,
-				1AEB19881B5A37C500A68BD3 /* JQMusicAnimation.m in Sources */,
+				1AEB19881B5A37C500A68BD3 /* JQMusic1Animation.m in Sources */,
 				1A9228231B5DD865003D7A55 /* JQCyclingLineAnimation.m in Sources */,
 				1AEB195C1B5A366F00A68BD3 /* AppDelegate.m in Sources */,
 				1AEB19591B5A366F00A68BD3 /* main.m in Sources */,
+				1A4E6D901B5F3F6C004A39F6 /* JQMusic2Animation.m in Sources */,
 				1A033D2D1B5DCE5700BD5C6A /* JQIndicatorView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,6 +1,6 @@
 //
-//  JQMusicAnimationDemoTests.m
-//  JQMusicAnimationDemoTests
+//  JQIndicatorViewDemoDemoTests.m
+//  JQIndicatorViewDemoDemoTests
 //
 //  Created by James on 15/7/18.
 //  Copyright (c) 2015年 JQ. All rights reserved.
@@ -9,11 +9,11 @@
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 
-@interface JQMusicAnimationDemoTests : XCTestCase
+@interface JQIndicatorViewDemoTests : XCTestCase
 
 @end
 
-@implementation JQMusicAnimationDemoTests
+@implementation JQIndicatorViewDemoTests
 
 - (void)setUp {
     [super setUp];

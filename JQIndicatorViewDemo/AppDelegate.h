@@ -1,6 +1,6 @@
 //
 //  AppDelegate.h
-//  JQMusicAnimationDemo
+//  JQIndicatorViewDemo
 //
 //  Created by James on 15/7/18.
 //  Copyright (c) 2015年 JQ. All rights reserved.

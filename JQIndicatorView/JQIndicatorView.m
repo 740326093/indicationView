@@ -8,7 +8,8 @@
 
 #import "JQIndicatorView.h"
 #import "JQIndicatorAnimationProtocol.h"
-#import "JQMusicAnimation.h"
+#import "JQMusic1Animation.h"
+#import "JQMusic2Animation.h"
 #import "JQCyclingSpotAnimation.h"
 #import "JQCyclingLineAnimation.h"
 #import "JQCyclingCycleAnimation.h"
@@ -19,6 +20,7 @@
 @interface JQIndicatorView ()
 
 @property BOOL continueAnimating;
+@property id<JQIndicatorAnimationProtocol> animation;
 
 @end
 
@@ -48,10 +50,10 @@
     if (self.isAnimating == NO) {
         self.layer.sublayers = nil;
         [self setToNormalState];
-        id<JQIndicatorAnimationProtocol> animation = [self animationForIndicatorType:self.type];
-        if ([animation respondsToSelector:@selector(configAnimationAtLayer:withTintColor:size:)]) {
+        self.animation = [self animationForIndicatorType:self.type];
+        if ([self.animation respondsToSelector:@selector(configAnimationAtLayer:withTintColor:size:)]) {
             
-            [animation configAnimationAtLayer:self.layer withTintColor:self.loadingTintColor size:self.size];
+            [self.animation configAnimationAtLayer:self.layer withTintColor:self.loadingTintColor size:self.size];
         }
         self.isAnimating = YES;
     }
@@ -59,16 +61,22 @@
 
 - (void)stopAnimating{
     if (self.isAnimating == YES) {
-        [self fadeOutWithAnimation:YES];
-        [self removeFromSuperview];
-        self.isAnimating = NO;
+//        [self fadeOutWithAnimation:YES];
+        if ([self.animation respondsToSelector:@selector(removeAnimation)]) {
+            [self.animation removeAnimation];
+            self.isAnimating = NO;
+            self.animation = nil;
+        }
+        
     }
 }
 
 - (id<JQIndicatorAnimationProtocol>)animationForIndicatorType:(JQIndicatorType)type{
     switch (type) {
-        case JQIndicatorTypeMusic:
-            return [[JQMusicAnimation alloc] init];
+        case JQIndicatorTypeMusic1:
+            return [[JQMusic1Animation alloc] init];
+        case JQIndicatorTypeMusic2:
+            return [[JQMusic2Animation alloc] init];
         case JQIndicatorTypeCyclingSpot:
             return [[JQCyclingSpotAnimation alloc] init];
         case JQIndicatorTypeCyclingLine:

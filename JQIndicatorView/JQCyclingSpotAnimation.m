@@ -8,6 +8,12 @@
 
 #import "JQCyclingSpotAnimation.h"
 
+@interface JQCyclingSpotAnimation ()
+
+@property CALayer *spotLayer;
+
+@end
+
 @implementation JQCyclingSpotAnimation
 
 
@@ -30,14 +36,14 @@
 #pragma mark - Cycling indicator animation
 
 - (void)addCyclingSpotAnimationLayerAtLayer:(CALayer *)layer withTintColor:(UIColor *)color size:(CGSize)size{
-    CALayer *spot = [CALayer layer];
-    spot.bounds = CGRectMake(0, 0, size.width/6, size.width/6);
-    spot.position = CGPointMake(size.width/2, 5);
-    spot.cornerRadius = spot.bounds.size.width/2;
-    spot.backgroundColor = color.CGColor;
-    spot.transform = CATransform3DMakeScale(0.1, 0.1, 0.1);
+    self.spotLayer = [CALayer layer];
+    self.spotLayer.bounds = CGRectMake(0, 0, size.width/6, size.width/6);
+    self.spotLayer.position = CGPointMake(size.width/2, 5);
+    self.spotLayer.cornerRadius = self.spotLayer.bounds.size.width/2;
+    self.spotLayer.backgroundColor = color.CGColor;
+    self.spotLayer.transform = CATransform3DMakeScale(0.1, 0.1, 0.1);
 
-    [layer addSublayer:spot];
+    [layer addSublayer:self.spotLayer];
     
     CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
     animation.fromValue = @1;
@@ -45,7 +51,11 @@
     animation.duration = 1.5;
     animation.repeatCount = CGFLOAT_MAX;
     
-    [spot addAnimation:animation forKey:nil];
+    [self.spotLayer addAnimation:animation forKey:@"animation"];
+}
+
+- (void)removeAnimation{
+    [self.spotLayer removeAnimationForKey:@"animation"];
 }
 
 

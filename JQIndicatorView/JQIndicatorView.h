@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 
 typedef NS_ENUM(NSInteger, JQIndicatorType){
-    JQIndicatorTypeMusic,
+    JQIndicatorTypeMusic1,
+    JQIndicatorTypeMusic2,
     JQIndicatorTypeCyclingSpot,
     JQIndicatorTypeCyclingLine,
     JQIndicatorTypeCyclingCycle

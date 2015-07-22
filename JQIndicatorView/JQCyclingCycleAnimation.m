@@ -8,16 +8,22 @@
 
 #import "JQCyclingCycleAnimation.h"
 
+@interface JQCyclingCycleAnimation ()
+
+@property CAShapeLayer *cycleLayer;
+
+@end
+
 @implementation JQCyclingCycleAnimation
 
 - (void)configAnimationAtLayer:(CALayer *)layer withTintColor:(UIColor *)color size:(CGSize)size{
-    CAShapeLayer *cycleAnimationLayer = [CAShapeLayer layer];
+    self.cycleLayer = [CAShapeLayer layer];
     
-    cycleAnimationLayer.frame = CGRectMake(0, 0, size.width, size.height);
-    cycleAnimationLayer.position = CGPointMake(0, 0);
-    cycleAnimationLayer.strokeColor = color.CGColor;
-    cycleAnimationLayer.fillColor = [UIColor clearColor].CGColor;
-    cycleAnimationLayer.lineWidth = 2.f;
+    self.cycleLayer.frame = CGRectMake(0, 0, size.width, size.height);
+    self.cycleLayer.position = CGPointMake(0, 0);
+    self.cycleLayer.strokeColor = color.CGColor;
+    self.cycleLayer.fillColor = [UIColor clearColor].CGColor;
+    self.cycleLayer.lineWidth = 2.f;
     
     CGFloat radius = MIN(size.width/2, size.height/2);
     CGPoint center = CGPointMake(radius, radius);
@@ -27,9 +33,9 @@
                                                     startAngle:-(M_PI_2)
                                                       endAngle:(5*M_PI_4)
                                                      clockwise:YES];
-    cycleAnimationLayer.path = path.CGPath;
+    self.cycleLayer.path = path.CGPath;
     
-    [layer addSublayer:cycleAnimationLayer];
+    [layer addSublayer:self.cycleLayer];
     
     CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
     [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
@@ -37,10 +43,11 @@
     animation.repeatCount = CGFLOAT_MAX;
     animation.fromValue = @0;
     animation.toValue = @(2*M_PI);
-    [cycleAnimationLayer addAnimation:animation forKey:nil];
-    
-//    CAKeyframeAnimation *animation = [CAKeyframeAnimation animationWithKeyPath:@"transform.rotation"];
-    
+    [self.cycleLayer addAnimation:animation forKey:@"animation"];
+}
+
+- (void)removeAnimation{
+    [self.cycleLayer removeAnimationForKey:@"animation"];
 }
 
 @end

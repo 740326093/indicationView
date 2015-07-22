@@ -8,6 +8,12 @@
 
 #import "JQCyclingLineAnimation.h"
 
+@interface JQCyclingLineAnimation ()
+
+@property CALayer *lineLayer;
+
+@end
+
 @implementation JQCyclingLineAnimation
 
 - (void)configAnimationAtLayer:(CALayer *)layer withTintColor:(UIColor *)color size:(CGSize)size{
@@ -26,16 +32,16 @@
 }
 
 - (void)addCyclingLineAnimationLayerAtLayer:(CALayer *)layer withTintColor:(UIColor *)color size:(CGSize)size{
-    CALayer *line = [CALayer layer];
-    line.bounds = CGRectMake(0, 0, 3, size.width/6);
-    line.position = CGPointMake(size.width/2, 5);
-    line.backgroundColor = color.CGColor;
-    line.opacity = 0.9;
-    line.cornerRadius = 1.5;
-    line.shouldRasterize = YES;
-    line.rasterizationScale = [UIScreen mainScreen].scale;
+    self.lineLayer = [CALayer layer];
+    self.lineLayer.bounds = CGRectMake(0, 0, 3, size.width/6);
+    self.lineLayer.position = CGPointMake(size.width/2, 5);
+    self.lineLayer.backgroundColor = color.CGColor;
+    self.lineLayer.opacity = 0.9;
+    self.lineLayer.cornerRadius = 1.5;
+    self.lineLayer.shouldRasterize = YES;
+    self.lineLayer.rasterizationScale = [UIScreen mainScreen].scale;
     
-    [layer addSublayer:line];
+    [layer addSublayer:self.lineLayer];
     
     CABasicAnimation *animation1 = [CABasicAnimation animationWithKeyPath:@"opacity"];
     animation1.fromValue = @0;
@@ -44,7 +50,11 @@
     animation1.repeatCount = CGFLOAT_MAX;
     
     
-    [line addAnimation:animation1 forKey:nil];
+    [self.lineLayer addAnimation:animation1 forKey:@"animation"];
+}
+
+- (void)removeAnimation{
+    [self.lineLayer removeAnimationForKey:@"animation"];
 }
 
 @end

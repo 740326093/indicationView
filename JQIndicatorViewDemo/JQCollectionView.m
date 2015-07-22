@@ -42,7 +42,7 @@ static NSString * const reuseIdentifier = @"Cell";
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 4;
+    return 5;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -78,19 +78,24 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     [collectionView deselectItemAtIndexPath:indexPath animated:YES];
-    
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"确定停止么？" message:nil preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
-        JQIndicatorView *indicator = (JQIndicatorView *)[[collectionView cellForItemAtIndexPath:indexPath] viewWithTag:101+indexPath.row];
-        if (indicator.isAnimating == YES) {
-            [indicator stopAnimating];
-        }
-    }];
-    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
-    [alert addAction:cancelAction];
-    [alert addAction:okAction];
-    
-    [self presentViewController:alert animated:YES completion:nil];
+    JQIndicatorView *indicator = (JQIndicatorView *)[[collectionView cellForItemAtIndexPath:indexPath] viewWithTag:101+indexPath.row];
+    if (indicator.isAnimating == YES) {
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"确定停止么？" message:nil preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
+            
+            if (indicator.isAnimating == YES) {
+                [indicator stopAnimating];
+            }
+        }];
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+        [alert addAction:cancelAction];
+        [alert addAction:okAction];
+        
+        [self presentViewController:alert animated:YES completion:nil];
+    }
+    else{
+        [indicator startAnimating];
+    }
 }
 
 #pragma mark - Others
