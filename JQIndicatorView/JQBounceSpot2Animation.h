@@ -1,8 +1,8 @@
 //
-//  JQCyclingSpotAnimation.h
+//  JQBounceSpot2Animation.h
 //  JQIndicatorViewDemo
 //
-//  Created by James on 15/7/21.
+//  Created by 家琪 on 15/7/27.
 //  Copyright (c) 2015年 JQ. All rights reserved.
 //
 
@@ -11,8 +11,6 @@
 
 #import "JQIndicatorAnimationProtocol.h"
 
-@interface JQCyclingSpotAnimation : NSObject <JQIndicatorAnimationProtocol>
-
-
+@interface JQBounceSpot2Animation : NSObject <JQIndicatorAnimationProtocol>
 
 @end

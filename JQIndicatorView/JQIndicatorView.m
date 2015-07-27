@@ -10,7 +10,8 @@
 #import "JQIndicatorAnimationProtocol.h"
 #import "JQMusic1Animation.h"
 #import "JQMusic2Animation.h"
-#import "JQCyclingSpotAnimation.h"
+#import "JQBounceSpot1Animation.h"
+#import "JQBounceSpot2Animation.h"
 #import "JQCyclingLineAnimation.h"
 #import "JQCyclingCycleAnimation.h"
 
@@ -77,8 +78,10 @@
             return [[JQMusic1Animation alloc] init];
         case JQIndicatorTypeMusic2:
             return [[JQMusic2Animation alloc] init];
-        case JQIndicatorTypeCyclingSpot:
-            return [[JQCyclingSpotAnimation alloc] init];
+        case JQIndicatorTypeBounceSpot1:
+            return [[JQBounceSpot1Animation alloc] init];
+        case JQIndicatorTypeBounceSpot2:
+            return [[JQBounceSpot2Animation alloc] init];
         case JQIndicatorTypeCyclingLine:
             return [[JQCyclingLineAnimation alloc] init];
         case JQIndicatorTypeCyclingCycle:

@@ -11,7 +11,8 @@
 typedef NS_ENUM(NSInteger, JQIndicatorType){
     JQIndicatorTypeMusic1,
     JQIndicatorTypeMusic2,
-    JQIndicatorTypeCyclingSpot,
+    JQIndicatorTypeBounceSpot1,
+    JQIndicatorTypeBounceSpot2,
     JQIndicatorTypeCyclingLine,
     JQIndicatorTypeCyclingCycle
 };
