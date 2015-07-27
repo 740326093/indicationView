@@ -20,8 +20,14 @@
 
 @interface JQIndicatorView ()
 
-@property BOOL continueAnimating;
 @property id<JQIndicatorAnimationProtocol> animation;
+@property JQIndicatorType type;
+@property CGSize size;
+@property UIColor *loadingTintColor;
+
+- (void)setToNormalState;
+- (void)setToFadeOutState;
+- (void)fadeOutWithAnimation:(BOOL)animated;
 
 @end
 
@@ -40,6 +46,8 @@
         self.type = type;
         self.loadingTintColor = color;
         self.size = size;
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appWillEnterBackground) name:UIApplicationWillResignActiveNotification object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appWillBecomeActive) name:UIApplicationWillEnterForegroundNotification object:nil];
     }
     
     return self;
@@ -48,27 +56,25 @@
 #pragma mark - Animation
 
 - (void)startAnimating{
-    if (self.isAnimating == NO) {
-        self.layer.sublayers = nil;
-        [self setToNormalState];
-        self.animation = [self animationForIndicatorType:self.type];
-        if ([self.animation respondsToSelector:@selector(configAnimationAtLayer:withTintColor:size:)]) {
-            
-            [self.animation configAnimationAtLayer:self.layer withTintColor:self.loadingTintColor size:self.size];
-        }
-        self.isAnimating = YES;
+    self.layer.sublayers = nil;
+    [self setToNormalState];
+    self.animation = [self animationForIndicatorType:self.type];
+    if ([self.animation respondsToSelector:@selector(configAnimationAtLayer:withTintColor:size:)]) {
+        
+        [self.animation configAnimationAtLayer:self.layer withTintColor:self.loadingTintColor size:self.size];
     }
+    self.isAnimating = YES;
 }
 
 - (void)stopAnimating{
     if (self.isAnimating == YES) {
-//        [self fadeOutWithAnimation:YES];
         if ([self.animation respondsToSelector:@selector(removeAnimation)]) {
             [self.animation removeAnimation];
             self.isAnimating = NO;
             self.animation = nil;
         }
-        
+        [self fadeOutWithAnimation:YES];
+        [[NSNotificationCenter defaultCenter] removeObserver:self];
     }
 }
 
@@ -121,6 +127,17 @@
     [self setToFadeOutState];
 }
 
+#pragma mark - Did enter background
 
+- (void)appWillEnterBackground{
+    if (self.isAnimating == YES) {
+        [self.animation removeAnimation];
+    }
+}
 
+- (void)appWillBecomeActive{
+    if (self.isAnimating == YES) {
+        [self startAnimating];
+    }
+}
 @end

@@ -27,14 +27,7 @@ typedef NS_ENUM(NSInteger, JQIndicatorType){
 - (void)startAnimating;
 - (void)stopAnimating;
 
-- (void)setToNormalState;
-- (void)setToFadeOutState;
-- (void)fadeOutWithAnimation:(BOOL)animated;
-
-
 @property BOOL isAnimating;
-@property JQIndicatorType type;
-@property CGSize size;
-@property UIColor *loadingTintColor;
+
 
 @end
